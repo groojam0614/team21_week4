@@ -6,8 +6,6 @@ package com.your.dream.real;
  */
 public class App 
 {
-	public static User user = new User();
-	public static calculateBill cal;
 	
 	private App() 
 	{
@@ -15,20 +13,8 @@ public class App
 	}
 	
     public static void main( String[] args ) {
-    	user.setGrade('s');
-		user.setMin(521);
-		user.setLineNum(5);
-		
-		cal = new calculateBill(user);
-		
-		printBill();
+    	Appcontroller appcontroller = new Appcontroller();
+    	appcontroller.run();
     }
-  
-	
-	public static void printBill(){
-		double bil = cal.calBasicBill() + cal.calAddBill() + cal.calFamilyDiscount();
-		System.out.printf("금액 : %.2f\n",bil);
-	}
-    
     
 }
