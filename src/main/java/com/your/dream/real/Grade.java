@@ -1,3 +1,4 @@
+package com.your.dream.real;
 
 public class Grade {
 	double basicBill;
@@ -5,11 +6,7 @@ public class Grade {
 	double minAddBill;
 	int limitMin;
 	
-	Grade(){
-		basicBill = 0;
-		lineAddBill = 0;
-		minAddBill = 0;
-		limitMin = 0;
+	public Grade(){
 	}
 	
 	double getter_basicBill(){
