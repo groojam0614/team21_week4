@@ -7,10 +7,6 @@ public class Grade {
 	int limitMin;
 	
 	public Grade(){
-		basicBill = 0;
-		lineAddBill = 0;
-		minAddBill = 0;
-		limitMin = 0;
 	}
 	
 	double getter_basicBill(){
