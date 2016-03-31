@@ -15,10 +15,10 @@ public class calculateBill {
 			return user.getGrade().getter_basicBill() + 2*user.getGrade().lineAddBill ;
 		else if (0 < lineNum )
 			return user.getGrade().getter_basicBill() + (lineNum-1)*user.getGrade().lineAddBill;
-		else
-			{System.out.println("error lineNum :" + lineNum);
+		else{
+			System.out.println("error lineNum :" + lineNum);
 			return 0;
-			}
+		}
 	}
 	
 	public double calAddBill(){
@@ -27,9 +27,10 @@ public class calculateBill {
 		
 		if( limitMin < min )
 			return (min-limitMin)* user.getGrade().getter_minBill();
-		else if ( min > 0)
+		else if( 0 < min)
 			return 0;
 		else{
+			System.out.println("error min value");
 			return 0;
 		}
 	}
