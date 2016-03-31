@@ -6,13 +6,29 @@ package com.your.dream.real;
  */
 public class App 
 {
+	public static User user = new User();
+	public static calculateBill cal;
+	
 	private App() 
 	{
 		// do not create App class directly
 	}
 	
     public static void main( String[] args ) {
-    	AppController appController = new AppController();
-    	appController.run();
+    	user.setGrade('s');
+		user.setMin(521);
+		user.setLineNum(5);
+		
+		cal = new calculateBill(user);
+		
+		printBill();
     }
+  
+	
+	public static void printBill(){
+		double bil = cal.calBasicBill() + cal.calAddBill() + cal.calFamilyDiscount();
+		System.out.printf("금액 : %.2f\n",bil);
+	}
+    
+    
 }
