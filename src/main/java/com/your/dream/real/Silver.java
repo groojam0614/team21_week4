@@ -3,7 +3,6 @@ package com.your.dream.real;
 public class Silver extends Grade{
 	
 	Silver(){
-		basicBill = 29.95;
 		lineAddBill = 21.5;
 		minAddBill = 0.54;
 		limitMin = 500;
@@ -20,5 +19,9 @@ public class Silver extends Grade{
 	}
 	int getter_limitMin(){
 		return limitMin;
+	}
+	
+	void setter_basicBill(){
+		this.basicBill = 29.95;
 	}
 }
